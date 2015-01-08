@@ -1,0 +1,21 @@
+{
+  "name": "twoffice_menu_service",
+  "version": "1.0.0",
+  "description": "twoffice menu service",
+  "main": "menu_fetcher.js",
+  "dependencies": {
+    "http": "^0.0.0",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node menu_fetcher.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/virmani/twoffice_menu_service"
+  },
+  "author": "virmani",
+  "license": "ISC"
+}
