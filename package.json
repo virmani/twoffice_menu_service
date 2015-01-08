@@ -5,7 +5,8 @@
   "main": "menu_fetcher.js",
   "dependencies": {
     "http": "^0.0.0",
-    "querystring": "^0.2.0"
+    "querystring": "^0.2.0",
+    "express": "^4.10.7"
   },
   "devDependencies": {},
   "scripts": {
