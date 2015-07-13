@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
   var req_options = {
     host: 'legacy.cafebonappetit.com',
     port: 80,
-    path: '/api/2/menus?format=json&cafe=792,704,403',
+    path: '/api/2/menus?format=json&cafe=792,704,403,901,902',
     method: 'GET',
     headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
