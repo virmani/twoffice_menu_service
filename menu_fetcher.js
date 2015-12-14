@@ -51,22 +51,24 @@ app.get('/', function (req, res) {
       var daytime_item_map = {};
       for(var item_id in menus.items) {
         var item = menus.items[item_id];
-        item.floor = item_cafe_map[item_id].floor;
-        item.daytime = item_cafe_map[item_id].daytime;
-        item.station = item_cafe_map[item_id].station;
+        if(item_cafe_map[item_id] != null){
+          item.floor = item_cafe_map[item_id].floor;
+          item.daytime = item_cafe_map[item_id].daytime;
+          item.station = item_cafe_map[item_id].station;
 
-        if(Array.isArray(item.cor_icon)) {
-          item.cor_icon = {};
-        }
+          if(Array.isArray(item.cor_icon)) {
+            item.cor_icon = {};
+          }
 
-        if(daytime_item_map[item.daytime] == undefined) {
-          daytime_item_map[item.daytime] = {};
-          daytime_item_map[item.daytime][item.floor] = [item];
-        } else {
-          if(daytime_item_map[item.daytime][item.floor] == undefined) {
+          if(daytime_item_map[item.daytime] == undefined) {
+            daytime_item_map[item.daytime] = {};
             daytime_item_map[item.daytime][item.floor] = [item];
           } else {
-            daytime_item_map[item.daytime][item.floor].push(item);
+            if(daytime_item_map[item.daytime][item.floor] == undefined) {
+              daytime_item_map[item.daytime][item.floor] = [item];
+            } else {
+              daytime_item_map[item.daytime][item.floor].push(item);
+            }
           }
         }
       }
